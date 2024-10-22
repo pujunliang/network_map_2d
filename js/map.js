@@ -26,19 +26,17 @@ class Map {
 	}
 
 	loadData() {
-		d3.json("/data/world.json", (error, root) => {
-			let world = root.files["world.json"].content;
-			world = JSON.parse(world);
-			let countries = topojson.feature(
-				world,
-				world.objects.countries
-			).features;
-			// 过滤南极洲
-			this.topo = countries.filter(
-				(item) => item.properties.name !== "Antarctica"
-			);
-			this.draw(this.topo);
-		});
+		let world = wordJSON.files["world.json"].content;
+		world = JSON.parse(world);
+		let countries = topojson.feature(
+			world,
+			world.objects.countries
+		).features;
+		// 过滤南极洲
+		this.topo = countries.filter(
+			(item) => item.properties.name !== "Antarctica"
+		);
+		this.draw(this.topo);
 	}
 
 	setup() {
