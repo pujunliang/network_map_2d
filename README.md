@@ -24,9 +24,9 @@
 
 项目截图：
 
-![enter description here](https://github.com/pujunliang/network_map_2d/blob/master/img_readme/示例截屏1.png)
-![enter description here](https://github.com/pujunliang/network_map_2d/blob/master/img_readme/示例截屏2.png)
-![enter description here](https://github.com/pujunliang/network_map_2d/blob/master/img_readme/示例截屏3.png)
+![enter description here](https://github.com/pujunliang/network_map_2d/blob/main/img_readme/示例截屏1.png)
+![enter description here](https://github.com/pujunliang/network_map_2d/blob/main/img_readme/示例截屏2.png)
+![enter description here](https://github.com/pujunliang/network_map_2d/blob/main/img_readme/示例截屏3.png)
 
 ## 结语
 
