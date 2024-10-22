@@ -1,0 +1,132 @@
+canvas {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	left: 0;
+	top: 0;
+	pointer-events: none;
+}
+.points {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	left: 0;
+	top: 0;
+	pointer-events: none;
+}
+
+.bottom-console {
+	position: fixed;
+	right: 16px;
+	bottom: 0;
+	width: calc(100% - 21rem);
+	height: 160px;
+	/* padding-right: 16px; */
+}
+.bottom-console > div.content {
+	font-size: 12px;
+	font-family: "Consolas";
+	color: rgba(183, 185, 185, 0.8);
+	border-bottom: 0;
+	border-left: 0;
+	padding: 16px;
+	/* padding: 16px;
+	padding-top: 8px;
+	padding-bottom: 16px; */
+
+	border-radius: 0px;
+	border: solid 1px rgba(70, 82, 83, 0.8);
+	background-color: rgba(12, 26, 30, 0.65);
+	height: 100%;
+}
+.bottom-console > div.content > canvas {
+	position: relative;
+	/* top: 0;
+	left: 0;
+    width: 100%;
+    height: 100%; */
+	/* background-color: black; */
+}
+
+.left-container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	z-index: 10;
+	width: calc(21rem - 32px);
+	border: solid 1px rgba(70, 82, 83, 0.8);
+	background-color: rgba(12, 26, 30, 0.65);
+}
+.left-container .divider__wrap {
+	position: relative;
+	width: 100%;
+	height: 1px;
+	margin: 1rem 0;
+}
+.left-container .divider__wrap::before {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 1px;
+	background-image: linear-gradient(to right, #80898a, rgba(30, 108, 118, 0));
+	content: "";
+}
+
+.left-container .item-wrapper {
+	position: relative;
+	margin: 1rem 0;
+	padding-left: 1.25rem;
+	padding-right: 1.75rem;
+}
+
+
+.system-name-wrapper {
+    height: 50px;
+    top: -8px;
+    left: 0px;
+    position: absolute;
+}
+
+.system-name__svg {
+	width: 100%;
+	height: 50px;
+	margin: auto;
+}
+
+.system-name__svg text {
+	text-transform: uppercase;
+	animation: stroke 8s infinite alternate;
+	letter-spacing: 4px;
+	font-size: 24px;
+    font-weight: bold;
+}
+
+@keyframes stroke {
+	0% {
+		fill: rgba(72, 138, 20, 0);
+		stroke: #bfc9ca;
+		stroke-dashoffset: 25%;
+		stroke-dasharray: 0 50%;
+		stroke-width: 0.8;
+	}
+	50% {
+		fill: rgba(72, 138, 20, 0);
+		stroke: #bfc9ca;
+		stroke-width: 1.2;
+	}
+	70% {
+		fill: rgba(72, 138, 20, 0);
+		stroke: #bfc9ca;
+		stroke-width: 1.5;
+	}
+	90%,
+	100% {
+		fill: #bfc9ca;
+		stroke: #bfc9ca;
+		stroke-dashoffset: -25%;
+		stroke-dasharray: 50% 0;
+		stroke-width: 0;
+	}
+}

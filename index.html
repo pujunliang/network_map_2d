@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+
+		<title>可视化地图攻击特效</title>
+
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/map.css" />
+		<script charset="utf-8" src="libs/jquery.min.js"></script>
+		<script charset="utf-8" src="libs/d3.v3.min.js"></script>
+		<script charset="utf-8" src="libs/d3.geo.projection.v0.min.js"></script>
+		<script charset="utf-8" src="libs/topojson.v1.min.js"></script>
+		<script charset="utf-8" src="libs/echarts.min.js"></script>
+		<!-- <script src="js/index.js"></script> -->
+		<!-- <script charset="utf-8" src="data/city.js"></script> -->
+
+		<script charset="utf-8" src="data/city2.js"></script>
+		<script charset="utf-8" src="js/utils.js"></script>
+		<script charset="utf-8" src="js/marker-svg.js"></script>
+		<script charset="utf-8" src="js/marker.js"></script>
+		<script charset="utf-8" src="js/flyLine.js" id="script"></script>
+		<script charset="utf-8" src="js/map.js"></script>
+		<script charset="utf-8" src="js/bottom-console.js"></script>
+		<script charset="utf-8" src="js/left-computer.js"></script>
+		<script charset="utf-8" src="js/left-charts.js"></script>
+		<script charset="utf-8" src="js/main.js"></script>
+	</head>
+
+	<body>
+		<canvas id="lineCanvas"></canvas>
+		<canvas id="pointsCanvas"></canvas>
+		<div id="container" style="z-index: 9999"></div>
+		<div class="bottom-console">
+			<div id="bottomConsole" class="content">
+				<canvas id="consoleCanvas"></canvas>
+			</div>
+		</div>
+		<div class="left-container">
+			<div class="item-wrapper system-name-wrapper">
+				<svg viewBox="0 0 240 50" class="system-name__svg">
+					<text x="0" y="70%">网络攻击地图（2D）</text>
+				</svg>
+			</div>
+			<div class="divider__wrap"></div>
+			<div
+				id="leftComputerWrapper"
+				class="item-wrapper"
+				style="height: 300px"
+			>
+				<canvas id="leftComputerCanvas" height="300"></canvas>
+			</div>
+			<div class="divider__wrap"></div>
+			<div class="item-wrapper" style="height: 300px">
+				<canvas id="leftRankingCanvas" height="300"></canvas>
+			</div>
+			<div class="divider__wrap"></div>
+			<div
+				class="item-wrapper"
+				style="height: calc(100% - 650px - 99px - 32px)"
+			>
+				<canvas
+					id="leftAreaCanvas"
+					style="width: 100%; height: 100%"
+				></canvas>
+			</div>
+		</div>
+		<script>
+			const main = new Main();
+			main.init();
+		</script>
+	</body>
+</html>
