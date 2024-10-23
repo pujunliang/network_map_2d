@@ -1,9 +1,9 @@
 body {
-	background-image: url(./imgs/gre3g.webp);
+	background-image: url("https://pujunliang.github.io/network_map_2d/imgs/gre3g.webp");
 	/* background-size: 256px; */
 	font-family: "Roboto", Helvetica, Arial, sans-serif;
 	margin: 0;
-    overflow: hidden;
+	overflow: hidden;
 }
 h4 {
 	position: absolute;
@@ -21,7 +21,7 @@ h4 {
 }
 .text {
 	font-size: 10px;
-    font-family: "Consolas";
+	font-family: "Consolas";
 	text-transform: capitalize;
 }
 
